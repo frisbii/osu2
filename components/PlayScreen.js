@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { Alert, Pressable, StyleSheet, Text, View } from 'react-native';
 import { useState } from 'react';
 import MenuButton from './MenuButton';
+import Crosshair from './Crosshair';
 
 export default function PlayScreen({ onMenuClick }) {
   return (
@@ -12,7 +13,7 @@ export default function PlayScreen({ onMenuClick }) {
         <MenuButton label="Stats" onPress={onMenuClick} />
       </View>
       <View style={styles.playField}>
-
+        <Crosshair />
       </View>
     </View>
   )
@@ -26,9 +27,8 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   playField: {
-    width: 250,
-    height: 250,
-    backgroundColor: '#949494',
-    borderRadius: 5
+    width: 400,
+    height: 400,
+    backgroundColor: 'white',
   },
 });
